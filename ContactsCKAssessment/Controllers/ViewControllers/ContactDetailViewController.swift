@@ -20,12 +20,28 @@ class ContactDetailViewController: UIViewController {
     var contact: Contact? {
         didSet {
             loadViewIfNeeded()
-//            updateViews()
+            updateViews()
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    // MARK: - Helper Functions
+    func updateViews() {
+        guard let contact = contact else { return }
+        nameTextField.text = contact.name
+        phoneNumberTextField.text = contact.phoneNumber
+        emailTextField.text = contact.email
+    }
+    
+    func update(contact: Contact) {
+        ContactController.shared.updateContact(contact: contact) { (success) in
+            if success {
+                self.updateViews()                
+            }
+        }
     }
     
     // MARK: - Actions
@@ -38,6 +54,11 @@ class ContactDetailViewController: UIViewController {
             }
         }
     }
-    
-    
+}
+
+extension ContactDetailViewController: UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        nameTextField.resignFirstResponder()
+        return true
+    }
 }

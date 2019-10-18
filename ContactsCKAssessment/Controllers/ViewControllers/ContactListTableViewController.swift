@@ -12,10 +12,17 @@ class ContactListTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        ContactController.shared.fetchAllContacts { (success) in
+            if success {
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            }
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         tableView.reloadData()
     }
 
@@ -29,7 +36,6 @@ class ContactListTableViewController: UITableViewController {
 
         let contact = ContactController.shared.contacts[indexPath.row]
         cell.textLabel?.text = contact.name
-        cell.detailTextLabel?.text = "\(String(describing: contact.phoneNumber))"
         
         return cell
     }
