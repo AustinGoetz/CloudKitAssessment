@@ -36,13 +36,6 @@ class ContactDetailViewController: UIViewController {
         emailTextField.text = contact.email
     }
     
-    func update(contact: Contact) {
-        ContactController.shared.updateContact(contact: contact) { (success) in
-            if success {
-                self.updateViews()                
-            }
-        }
-    }
     
     // MARK: - Actions
     @IBAction func saveButtonTapped(_ sender: UIButton) {
@@ -53,12 +46,5 @@ class ContactDetailViewController: UIViewController {
                 self.navigationController?.popViewController(animated: true)
             }
         }
-    }
-}
-
-extension ContactDetailViewController: UITextFieldDelegate {
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        nameTextField.resignFirstResponder()
-        return true
     }
 }
