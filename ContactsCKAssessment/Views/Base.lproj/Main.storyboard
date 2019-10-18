@@ -10,7 +10,7 @@
         <!--Contacts-->
         <scene sceneID="SO5-3a-2Ag">
             <objects>
-                <tableViewController id="J1d-Ly-v2J" sceneMemberID="viewController">
+                <tableViewController id="J1d-Ly-v2J" customClass="ContactListTableViewController" customModule="ContactsCKAssessment" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="pZU-Md-Hla">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -49,7 +49,7 @@
                     <navigationItem key="navigationItem" title="Contacts" id="GfE-Sx-An3">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Nkc-3m-UbL">
                             <connections>
-                                <segue destination="gUj-8z-8KW" kind="show" id="WhN-r3-rtW"/>
+                                <segue destination="gUj-8z-8KW" kind="show" identifier="toContactDetailVC" id="WhN-r3-rtW"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -61,7 +61,7 @@
         <!--New Contact-->
         <scene sceneID="myJ-T2-t2u">
             <objects>
-                <viewController id="gUj-8z-8KW" sceneMemberID="viewController">
+                <viewController id="gUj-8z-8KW" customClass="ContactDetailViewController" customModule="ContactsCKAssessment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7Nh-hU-aD9">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -122,6 +122,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VM7-73-ZPU">
                                 <rect key="frame" x="20" y="375" width="374" height="30"/>
                                 <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveButtonTapped:" destination="gUj-8z-8KW" eventType="touchUpInside" id="bcZ-qq-yMs"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -136,6 +139,11 @@
                         <viewLayoutGuide key="safeArea" id="IDy-wX-NqX"/>
                     </view>
                     <navigationItem key="navigationItem" title="New Contact" id="bBx-M3-ocl"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="Tew-Mh-RNG" id="Bgy-Yt-vdd"/>
+                        <outlet property="nameTextField" destination="ubg-7z-INW" id="ADI-UF-9jH"/>
+                        <outlet property="phoneNumberTextField" destination="Wrs-Gv-wZx" id="tt3-3P-vKB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9oN-cT-Cjf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

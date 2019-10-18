@@ -16,6 +16,7 @@
 		2A771798235A0E260040900B /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A771797235A0E260040900B /* Contact.swift */; };
 		2A77179A235A14960040900B /* ContactController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A771799235A14960040900B /* ContactController.swift */; };
 		2A77179C235A19640040900B /* ContactListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A77179B235A19640040900B /* ContactListTableViewController.swift */; };
+		2A77179E235A1C600040900B /* ContactDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A77179D235A1C600040900B /* ContactDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		2A771797235A0E260040900B /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
 		2A771799235A14960040900B /* ContactController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactController.swift; sourceTree = "<group>"; };
 		2A77179B235A19640040900B /* ContactListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListTableViewController.swift; sourceTree = "<group>"; };
+		2A77179D235A1C600040900B /* ContactDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				2A77179B235A19640040900B /* ContactListTableViewController.swift */,
+				2A77179D235A1C600040900B /* ContactDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 				2A77177A235A0C5E0040900B /* AppDelegate.swift in Sources */,
 				2A77179A235A14960040900B /* ContactController.swift in Sources */,
 				2A77179C235A19640040900B /* ContactListTableViewController.swift in Sources */,
+				2A77179E235A1C600040900B /* ContactDetailViewController.swift in Sources */,
 				2A77177C235A0C5E0040900B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -357,7 +361,7 @@
 				CODE_SIGN_ENTITLEMENTS = ContactsCKAssessment/ContactsCKAssessment.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G359J97949;
-				INFOPLIST_FILE = ContactsCKAssessment/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/ContactsCKAssessment/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -376,7 +380,7 @@
 				CODE_SIGN_ENTITLEMENTS = ContactsCKAssessment/ContactsCKAssessment.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = G359J97949;
-				INFOPLIST_FILE = ContactsCKAssessment/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/ContactsCKAssessment/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

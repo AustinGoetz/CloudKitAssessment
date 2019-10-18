@@ -27,14 +27,20 @@ class ContactListTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "contactCell", for: indexPath)
 
-        // Configure the cell...
-
+        let contact = ContactController.shared.contacts[indexPath.row]
+        cell.textLabel?.text = contact.name
+        cell.detailTextLabel?.text = "\(String(describing: contact.phoneNumber))"
+        
         return cell
     }
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "toContactDetailVC" {
+            let destinationVC = segue.destination as? ContactDetailViewController
+            guard let indexPath = tableView.indexPathForSelectedRow else { return }
+            let contact = ContactController.shared.contacts[indexPath.row]
+            destinationVC?.contact = contact
+        }
     }
 }

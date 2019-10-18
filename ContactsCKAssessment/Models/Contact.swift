@@ -15,17 +15,16 @@ struct ContactStrings {
     static let nameKey = "name"
     static let phoneNumberKey = "phoneNumber"
     static let emailKey = "email"
-//    static let ckRecordIDKey = "ckRecordID"
 }
 
 class Contact {
     
     let name: String
-    let phoneNumber: Int?
+    let phoneNumber: String?
     let email: String?
     let ckRecordID: CKRecord.ID
     
-    init(name: String, phoneNumber: Int?, email: String?, ckRecordID: CKRecord.ID = CKRecord.ID(recordName: UUID().uuidString)) {
+    init(name: String, phoneNumber: String?, email: String?, ckRecordID: CKRecord.ID = CKRecord.ID(recordName: UUID().uuidString)) {
         self.name = name
         self.phoneNumber = phoneNumber
         self.email = email
@@ -39,7 +38,7 @@ extension Contact {
     convenience init?(ckRecord: CKRecord) {
         
         guard let name = ckRecord[ContactStrings.nameKey] as? String,
-            let phoneNumber = ckRecord[ContactStrings.phoneNumberKey] as? Int,
+            let phoneNumber = ckRecord[ContactStrings.phoneNumberKey] as? String,
             let email = ckRecord[ContactStrings.emailKey] as? String
             else { return nil }
             

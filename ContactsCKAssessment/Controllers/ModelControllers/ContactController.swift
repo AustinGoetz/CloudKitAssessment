@@ -23,7 +23,7 @@ class ContactController {
     // MARK: - CRUD
     
     // Create
-    func createContact(name: String, phoneNumber: Int?, email: String?, completion: @escaping (Bool) -> Void) {
+    func createContact(name: String, phoneNumber: String?, email: String?, completion: @escaping (Bool) -> Void) {
         
         let newContact = Contact(name: name, phoneNumber: phoneNumber, email: email)
         let record = CKRecord(contact: newContact)
