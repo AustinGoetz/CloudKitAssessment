@@ -9,24 +9,28 @@
 /* Begin PBXBuildFile section */
 		2A77177A235A0C5E0040900B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A771779235A0C5E0040900B /* AppDelegate.swift */; };
 		2A77177C235A0C5E0040900B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A77177B235A0C5E0040900B /* SceneDelegate.swift */; };
-		2A77177E235A0C5E0040900B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A77177D235A0C5E0040900B /* ViewController.swift */; };
 		2A771781235A0C5E0040900B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A77177F235A0C5E0040900B /* Main.storyboard */; };
 		2A771783235A0C5E0040900B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A771782235A0C5E0040900B /* Assets.xcassets */; };
 		2A771786235A0C5E0040900B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A771784235A0C5E0040900B /* LaunchScreen.storyboard */; };
 		2A771790235A0C740040900B /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A77178F235A0C740040900B /* CloudKit.framework */; };
+		2A771798235A0E260040900B /* Contact.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A771797235A0E260040900B /* Contact.swift */; };
+		2A77179A235A14960040900B /* ContactController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A771799235A14960040900B /* ContactController.swift */; };
+		2A77179C235A19640040900B /* ContactListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A77179B235A19640040900B /* ContactListTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2A771776235A0C5E0040900B /* ContactsCKAssessment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ContactsCKAssessment.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A771779235A0C5E0040900B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A77177B235A0C5E0040900B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2A77177D235A0C5E0040900B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2A771780235A0C5E0040900B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2A771782235A0C5E0040900B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2A771785235A0C5E0040900B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2A771787235A0C5E0040900B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2A77178D235A0C710040900B /* ContactsCKAssessment.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ContactsCKAssessment.entitlements; sourceTree = "<group>"; };
 		2A77178F235A0C740040900B /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		2A771797235A0E260040900B /* Contact.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contact.swift; sourceTree = "<group>"; };
+		2A771799235A14960040900B /* ContactController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactController.swift; sourceTree = "<group>"; };
+		2A77179B235A19640040900B /* ContactListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,13 +65,11 @@
 		2A771778235A0C5E0040900B /* ContactsCKAssessment */ = {
 			isa = PBXGroup;
 			children = (
+				2A77178D235A0C710040900B /* ContactsCKAssessment.entitlements */,
 				2A771792235A0CAC0040900B /* Models */,
 				2A771794235A0CC40040900B /* Views */,
 				2A771793235A0CBA0040900B /* Controllers */,
-				2A77178D235A0C710040900B /* ContactsCKAssessment.entitlements */,
 				2A771791235A0CA30040900B /* Resources */,
-				2A77177D235A0C5E0040900B /* ViewController.swift */,
-				2A77177F235A0C5E0040900B /* Main.storyboard */,
 			);
 			path = ContactsCKAssessment;
 			sourceTree = "<group>";
@@ -95,6 +97,7 @@
 		2A771792235A0CAC0040900B /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				2A771797235A0E260040900B /* Contact.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -111,6 +114,7 @@
 		2A771794235A0CC40040900B /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				2A77177F235A0C5E0040900B /* Main.storyboard */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -118,6 +122,7 @@
 		2A771795235A0CCC0040900B /* ModelControllers */ = {
 			isa = PBXGroup;
 			children = (
+				2A771799235A14960040900B /* ContactController.swift */,
 			);
 			path = ModelControllers;
 			sourceTree = "<group>";
@@ -125,6 +130,7 @@
 		2A771796235A0CD30040900B /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				2A77179B235A19640040900B /* ContactListTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -200,8 +206,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2A77177E235A0C5E0040900B /* ViewController.swift in Sources */,
+				2A771798235A0E260040900B /* Contact.swift in Sources */,
 				2A77177A235A0C5E0040900B /* AppDelegate.swift in Sources */,
+				2A77179A235A14960040900B /* ContactController.swift in Sources */,
+				2A77179C235A19640040900B /* ContactListTableViewController.swift in Sources */,
 				2A77177C235A0C5E0040900B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
